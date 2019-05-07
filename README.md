@@ -17,6 +17,9 @@ VOLUMES = {
 }
 ```
 
+Each object in ``VOLUMES`` corresponds to a preset of several volumes.
+Each key in a preset is the name of a chromecast, with volume percent to set as value.
+
 ## Usage
 ```bash
 $ make apply
