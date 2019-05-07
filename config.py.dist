@@ -1,0 +1,7 @@
+VOLUMES = {
+    'default': {
+       'la télé': 20.00,
+       'cuisine': 20.00,
+       'étagère': 20.00
+    }
+}
