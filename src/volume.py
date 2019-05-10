@@ -16,7 +16,7 @@ class Volume:
         try:
             self.devices = config.VOLUMES[groupName]
         except:
-            raise ValueError('Couldn\'t not find group volumes with name: ' + groupName)
+            print("Warn: preset was not found")
 
     def apply(self):
         for chromecastIpOrName, volumePercent in self.devices.items():
