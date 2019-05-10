@@ -6,4 +6,4 @@ apply:
 	python3 cli.py
 
 server:
-	python3 reset-volume-server.py
+	python3 server.py
