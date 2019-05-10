@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-import config
+try:
+    import config
+except:
+    print('WARN! Unable to load config file')
+
 import pychromecast
 import socket
 
