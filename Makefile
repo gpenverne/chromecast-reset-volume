@@ -3,4 +3,7 @@ install:
 	cp config.py.dist config.py
 
 apply:
-	python3 reset-volume.py
+	python3 cli.py
+
+server:
+	python3 reset-volume-server.py

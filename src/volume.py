@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import config
-import sys
 import pychromecast
 import socket
 
@@ -33,11 +32,9 @@ class Volume:
             print('Set '+cc.device.friendly_name+' at volume '+str(self.devices[cc.device.friendly_name])+' on ip '+cc.host)
             cc.wait()
             cc.set_volume(self.devices[cc.device.friendly_name])
+
     def setVolumeOnIpAddress(self, chromecastIpOrName, volumePercent):
         device = pychromecast.Chromecast(host=chromecastIpOrName)
         print('Set '+chromecastIpOrName+' at volume '+str(volumePercent))
         device.wait()
         device.set_volume(volumePercent)
-
-volumeManagement = Volume(sys.argv[1] if len(sys.argv) > 1 else 'default')
-volumeManagement.apply()

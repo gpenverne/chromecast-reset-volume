@@ -10,7 +10,7 @@ Open the ``config.py`` file, you will see:
 ```python
 VOLUMES = {
     'default': {
-       'la télé': 20.00,
+       '123.123.123.123': 20.00,
        'cuisine': 20.00,
        'étagère': 20.00
     }
@@ -26,7 +26,21 @@ You can put ip address instead of the chromecast name to avoid zeroconf scan tim
 $ make apply
 ```
 
-## Multi volums groups
+## Specific preset
 ```bash
-$ python3 reset-volume.py "groupName"
+$ cli.py "groupName"
 ```
+
+
+## Server
+You can launch your presets using an api endpoint (perfect for ifttt and google assistant for example ;)
+
+### Launch
+```bash
+$ server.py
+```
+### Config
+Open the ``config.py`` file, you will see a ``SERVER_PORT``, you can customize as you want.
+
+### Usage
+Simply go to ``http://your-server-ip:your-port/default`` (where defaut is the name of a preset).
